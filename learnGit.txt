@@ -28,3 +28,4 @@
 27 git branch -d xxx--删除分支
 28 git merge xxx--合并某分直到当前分支
 29 git merge --abort--放弃这次合并 
+30
