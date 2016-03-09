@@ -1,0 +1,30 @@
+﻿1 cd--到那个文件下
+2 pwd--查看当前工作目录
+3 mkdir--创建新的文件夹
+4 git init--初始化一个仓库
+5 ls -al--查看仓库里的所有文件
+6 echo xx > xxx--向xx里输出xx 
+7 echo xx >> xxx--向xx里追加输出xx（保存原有）
+8 cat--查看文件的内容
+9 git add--想文件里添加内容
+
+10 git add -A 添加所有修改到暂存区
+11 git commit -m"xxx" 提交到历史区
+12 git push origin master 提交到github上
+13 rm 删除
+14 git status 查看文件修改状态
+15 git log   查看历史提交详细记录
+16 git log --oneline 历史提交的简单记录 
+17 git log --graph  历史提交时针记录列表
+18 git diff--查看历史区和工作区的修改区别
+19 git diff HEAD
+20 git checkout -- xxxx--将撤销所有工作区的操作用暂存区覆盖
+21 git checkout xxx--切换分支
+22 git checkout -b xxx--创建切换分支
+23 git reset HEAD xxx--可以把暂存区的修改撤销掉,使用历史区里的文件覆盖暂存区
+24 git reset HEAD^--历史回退到上一个版本
+25 git branch--查看分支
+26 git branch xxxx--创建分支
+27 git branch -d xxx--删除分支
+28 git merge xxx--合并某分直到当前分支
+29 git merge --abort--放弃这次合并 
