@@ -29,3 +29,5 @@
 28 git merge xxx--合并某分直到当前分支
 29 git merge --abort--放弃这次合并 
 30
+git remote add origin xxxxxx--增加远程提交地址的只有origin用的是SSH URL链接
+31 git push -u origin master--提交修改到远程仓库
