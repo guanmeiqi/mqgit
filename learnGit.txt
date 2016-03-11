@@ -1,44 +1,45 @@
-﻿1 cd--到那个文件下
-2 pwd--查看当前工作目录
-3 mkdir--创建新的文件夹
-4 git init--初始化一个仓库
-5 ls -al--查看仓库里的所有文件
-6 echo xx > xxx--向xx里输出xx 
-7 echo xx >> xxx--向xx里追加输出xx（保存原有）
-8 cat--查看文件的内容
-9 git add--想文件里添加内容
-
-10 git add -A 添加所有修改到暂存区
-11 git commit -m"xxx" 提交到历史区
-12 git push origin master 提交到github上
-13 rm 删除
-14 git status 查看文件修改状态
-15 git log   查看历史提交详细记录
-16 git log --oneline 历史提交的简单记录 
-17 git log --graph  历史提交时针记录列表
-18 git diff--查看历史区和工作区的修改区别
-19 git diff HEAD
-20 git checkout -- xxxx--将撤销所有工作区的操作用暂存区覆盖
-21 git checkout xxx--切换分支（改变HEAD指向）
-22 git checkout -b xxx--创建切换分支
-23 git reset HEAD xxx--可以把暂存区的修改撤销掉,使用历史区里的文件覆盖暂存区
-24 git reset HEAD^--历史回退到上一个版本
-25 git branch--查看分支
-26 git branch xxxx--创建分支
-27 git branch -d xxx--删除分支
-28 git merge xxx--合并某分直到当前分支
-29 git merge --abort--放弃这次合并 
-30
+﻿ cd--切换工作目录
+ pwd--查看当前工作目录
+ mkdir--创建新的文件夹
+ touch--新建文件
+ git init--初始化一个仓库
+ ls -al--查看仓库里的所有文件
+ 工作区   暂存区    历史区
+ 工作区有一个隐藏目录.git,这个不算工作区，是GIT的版本库，里面有很多东西其中最重要的为stage的暂存区，还有GIT自动创建的第一个分支master，以及指向master的一个指针HEAD
+ echo xx > xxx--向xx里输出xx
+ echo xx >> xxx--向xx里追加输出xx（保存原有）
+ cat--查看文件的内容
+ git add--想文件里添加内容
+ git add -A 添加所有修改到暂存区
+ git commit -m"xxx" 提交到历史区
+ 不加-m参数会进入vi编辑器里，按esc退出
+ git push origin master 提交到github上
+ rm 删除  rm -rf xxxx
+ git status 查看文件修改状态
+ git log--查看历史提交详细记录
+ git log --oneline 历史提交的简单记录
+ git log --graph  历史提交时针记录列表
+ git diff--查看历史区和工作区的修改区别
+ git diff HEAD
+ git checkout -- xxxx--将撤销所有工作区的操作用暂存区覆盖
+ git checkout xxx--切换分支（改变HEAD指向）
+ git checkout -b xxx--创建切换分支
+ git reset HEAD xxx--可以把暂存区的修改撤销掉,使用历史区里的文件覆盖暂存区
+ git reset HEAD^--历史回退到上一个版本
+ git branch--查看分支
+ git branch xxxx--创建分支
+ git branch -d xxx--删除分支
+ git merge xxx--合并某分直到当前分支
+ git merge --abort--放弃这次合并
  git remote add origin xxxxxx--增加远程提交地址的只有origin用的是SSH URL链接
-
-31 git push -u origin master--提交修改到远程仓库
-
-32 git rebase--把当前分支的工作直接移到master上
+ git remote -v--查看远程仓库
+ git push -u origin master--提交修改到远程仓库
+ git rebase--把当前分支的工作直接移到master上
 HEAD 总是指向最近一次提交记录，表现为当前工作树。大多数修改工作树的 Git 命令都开始于改变 HEAD 指向。
 我使用相对引用最多的就是移动分支。你可以使用 -f 选项直接让分支指向另一个提交。举个例子:
-33 git branch -f master HEAD~3--（强制）移动 master 指向 HEAD 的第3级父提交。
-34 git revert HEAD--撤销远程服务器上的提交
-35 git cherry-pick--将当前的提交复制到master下
-36 git fetch--下载本地仓库未包含的提交对象，更新远端分支（origin/master）
-37 git pull--就是git fetch和git merge的缩写
-38 git pull --rebase 就是 fetch 和 rebase 的简写!
+ git branch -f master HEAD~3--（强制）移动 master 指向 HEAD 的第3级父提交。
+ git revert HEAD--撤销远程服务器上的提交
+ git cherry-pick--将当前的提交复制到master下
+ git fetch--下载本地仓库未包含的提交对象，更新远端分支（origin/master）
+ git pull--就是git fetch和git merge的缩写
+ git pull --rebase 就是 fetch 和 rebase 的简写!
