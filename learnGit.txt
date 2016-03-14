@@ -14,11 +14,17 @@
  git commit -m"xxx" 提交到历史区
  不加-m参数会进入vi编辑器里，按esc退出
  git push origin master 提交到github上
- rm 删除  rm -rf xxxx
+ rm 1.txt--删除工作区
+ git rm 1.txt--删除工作区和暂存区
+ git rm --cached--删除暂存区  rm -rf xxxx
  git status 查看文件修改状态
+ git stash apply stash@{1}
+ doskey /history >> current.log--打印命令行记录
  git log--查看历史提交详细记录
  git log --oneline 历史提交的简单记录
  git log --graph  历史提交时针记录列表
+ git log --oneline --graph --decorate --all
+ --graph 显示图形   --decorate 显示当前提交的分支名和HEAD指针指向  --all 显示所有分支
  git diff--查看历史区和工作区的修改区别
  git diff HEAD
  git checkout -- xxxx--将撤销所有工作区的操作用暂存区覆盖
