@@ -1,4 +1,4 @@
-﻿ cd--切换工作目录
+ cd--切换工作目录
  pwd--查看当前工作目录
  mkdir--创建新的文件夹
  touch--新建文件
@@ -49,3 +49,4 @@ HEAD 总是指向最近一次提交记录，表现为当前工作树。大多数
  git fetch--下载本地仓库未包含的提交对象，更新远端分支（origin/master）
  git pull--就是git fetch和git merge的缩写
  git pull --rebase 就是 fetch 和 rebase 的简写!
+ git rebase
